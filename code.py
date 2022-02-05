@@ -8,22 +8,22 @@ def ButtonCommand():
     global Clicks
     Clicks = Clicks+1
     if (Clicks % 2)==0:
-        SwitchButton.config(text = "STOP")
+        OnOFFButton.config(text = "STOP")
         #add other code
     elif (Clicks % 2)==1:
-        SwitchButton.config(text = "START")
+        OnOffButton.config(text = "START")
         #add other code
 
 Clicks = 1
 
-SwitchButton = tk.Button(
+OnOffButton = tk.Button(
     text = "START",
     width = 17,
     height = 2,
     bg = "light Grey",
     fg = "black",
     )
-SwitchButton.config(command=ButtonCommand)
+OnOffButton.config(command=ButtonCommand)
 
-SwitchButton.pack(pady=50)
+OnOffButton.pack(pady=50)
 MainWindow.mainloop()
